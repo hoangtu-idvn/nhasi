@@ -2,8 +2,8 @@
 /* Tin tức */
 $nametype = "dich-vu";
 $config['news'][$nametype]['title_main'] = "Dịch Vụ";
-$config['news'][$nametype]['dropdown'] = false;
-$config['news'][$nametype]['list'] = false;
+$config['news'][$nametype]['dropdown'] = true;
+$config['news'][$nametype]['list'] = true;
 $config['news'][$nametype]['cat'] = false;
 $config['news'][$nametype]['item'] = false;
 $config['news'][$nametype]['sub'] = false;
@@ -68,10 +68,8 @@ $config['news'][$nametype]['images_list'] = true;
 $config['news'][$nametype]['show_images_list'] = true;
 $config['news'][$nametype]['slug_list'] = true;
 $config['news'][$nametype]['check_list'] = array("noibat" => "Nổi bật", "hienthi" => "Hiển thị");
-$config['news'][$nametype]['gallery_list'] = array
-(
-    $nametype => array
-    (
+$config['news'][$nametype]['gallery_list'] = array(
+    $nametype => array(
         "title_main_photo" => "Hình ảnh Tin tức cấp 1",
         "title_sub_photo" => "Hình ảnh",
         "check_photo" => array("hienthi" => "Hiển thị"),
@@ -84,8 +82,7 @@ $config['news'][$nametype]['gallery_list'] = array
         "thumb_photo" => '100x100x1',
         "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif',
     ),
-    "video" => array
-    (
+    "video" => array(
         "title_main_photo" => "Video Tin tức cấp 1",
         "title_sub_photo" => "Video",
         "check_photo" => array("hienthi" => "Hiển thị"),

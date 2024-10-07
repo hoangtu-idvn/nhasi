@@ -436,4 +436,7 @@ $(document).ready(function () {
       buttons: true,
     });
   }
+  if (isExist($("#fotorama-videos"))) {
+    $("#fotorama-videos").fotorama();
+  }
 });

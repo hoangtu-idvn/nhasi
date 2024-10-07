@@ -1,18 +1,18 @@
 <?php
 include "news/config-tintuc.php";
-//    include "news/config-dichvu.php";
+include "news/config-dichvu.php";
 
 // $config['news']['tuyen-dung'] = array_merge(include "news/config-news-no-category.php", [
 //     'title_main' => 'Tuyển Dụng',
 //     'width' => 320,
 //     'height' => 240,
 // ]);
-$config['news']['dich-vu'] = array_merge(include "news/config-news-no-category.php", [
-    'title_main' => 'Dịch Vụ',
-    'check' => ["hienthi" => "Hiển thị", "noibat" => "Nổi Bật"],
-    'width' => 320,
-    'height' => 240,
-]);
+// $config['news']['dich-vu'] = array_merge(include "news/config-news-no-category.php", [
+//     'title_main' => 'Dịch Vụ',
+//     'check' => ["hienthi" => "Hiển thị", "noibat" => "Nổi Bật"],
+//     'width' => 320,
+//     'height' => 240,
+// ]);
 $config['news']['kien-thuc'] = array_merge(include "news/config-news-no-category.php", [
     'title_main' => 'Kiến Thức',
     'check' => ["hienthi" => "Hiển thị", "noibat" => "Nổi Bật"],

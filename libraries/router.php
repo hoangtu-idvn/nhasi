@@ -110,6 +110,8 @@ $requick = array(
 	/* Video */
 	array("tbl" => "photo", "field" => "id", "source" => "video", "com" => "video", "type" => "video", "menu" => true),
 
+	array("tbl" => "news_list", "field" => "idl", "source" => "news", "com" => "dich-vu", "type" => "dich-vu"),
+	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
 	/* Tin tức */
 	array("tbl" => "news_list", "field" => "idl", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc"),
 	array("tbl" => "news_cat", "field" => "idc", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc"),
@@ -117,10 +119,11 @@ $requick = array(
 	array("tbl" => "news_sub", "field" => "ids", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc"),
 	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tin-tuc", "type" => "tin-tuc", "menu" => true),
 
+	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "su-kien", "type" => "su-kien", "menu" => true),
+
 	/* Bài viết */
 	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "tuyen-dung", "type" => "tuyen-dung", "menu" => true),
-    array("tbl" => "news", "field" => "id", "source" => "news", "com" => "dich-vu", "type" => "dich-vu", "menu" => true),
-    array("tbl" => "news", "field" => "id", "source" => "news", "com" => "dao-tao", "type" => "dao-tao", "menu" => true),
+	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "dao-tao", "type" => "dao-tao", "menu" => true),
 	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "chinh-sach", "type" => "chinh-sach", "menu" => false),
 	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "kien-thuc", "type" => "kien-thuc", "menu" => true),
 	array("tbl" => "news", "field" => "id", "source" => "news", "com" => "thu-vien", "type" => "thu-vien", "menu" => true),
@@ -168,13 +171,13 @@ switch ($com) {
 		$seo->set('type', 'article');
 		$titleMain = gioithieu;
 		break;
-		case 'bang-gia':
-			$source = "static";
-			$template = "static/static";
-			$type = $com;
-			$seo->set('type', 'article');
-			$titleMain = "Bảng Giá";
-			break;
+	case 'bang-gia':
+		$source = "static";
+		$template = "static/static";
+		$type = $com;
+		$seo->set('type', 'article');
+		$titleMain = "Bảng Giá";
+		break;
 
 	case 'tin-tuc':
 		$source = "news";
@@ -182,6 +185,13 @@ switch ($com) {
 		$seo->set('type', isset($_GET['id']) ? "article" : "object");
 		$type = $com;
 		$titleMain = tintuc;
+		break;
+	case 'su-kien':
+		$source = "news";
+		$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
+		$seo->set('type', isset($_GET['id']) ? "article" : "object");
+		$type = $com;
+		$titleMain = "Sự kiện";
 		break;
 
 	case 'tuyen-dung':
@@ -199,27 +209,27 @@ switch ($com) {
 		$type = $com;
 		$titleMain = "Kiến Thức";
 		break;
-    case 'dich-vu':
-        $source = "news";
-        $template = isset($_GET['id']) ? "news/news_detail" : "news/news_dichvu";
-        $seo->set('type', isset($_GET['id']) ? "article" : "object");
-        $type = $com;
-        $titleMain = "Dịch Vụ";
-        break;
-		case 'thu-vien':
-			$source = "news";
-			$template = isset($_GET['id']) ? "news/news_detail" : "news/news_dichvu";
-			$seo->set('type', isset($_GET['id']) ? "article" : "object");
-			$type = $com;
-			$titleMain = "Thư Viện";
-			break;
-    case 'dao-tao':
-        $source = "news";
-        $template = isset($_GET['id']) ? "news/news_detail" : "news/news";
-        $seo->set('type', isset($_GET['id']) ? "article" : "object");
-        $type = $com;
-        $titleMain = "Đạo Tạo";
-        break;
+	case 'dich-vu':
+		$source = "news";
+		$template = isset($_GET['id']) ? "news/news_detail" : "news/news_dichvu";
+		$seo->set('type', isset($_GET['id']) ? "article" : "object");
+		$type = $com;
+		$titleMain = "Dịch Vụ";
+		break;
+	case 'thu-vien':
+		$source = "news";
+		$template = isset($_GET['id']) ? "news/news_detail" : "news/news_dichvu";
+		$seo->set('type', isset($_GET['id']) ? "article" : "object");
+		$type = $com;
+		$titleMain = "Thư Viện";
+		break;
+	case 'dao-tao':
+		$source = "news";
+		$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
+		$seo->set('type', isset($_GET['id']) ? "article" : "object");
+		$type = $com;
+		$titleMain = "Đạo Tạo";
+		break;
 	case 'chinh-sach':
 		$source = "news";
 		$template = isset($_GET['id']) ? "news/news_detail" : "";
@@ -246,7 +256,7 @@ switch ($com) {
 
 	case 'tim-kiem':
 		$source = "search";
-		$template = "product/product";
+		$template = "news/news_dichvu";
 		$seo->set('type', 'object');
 		$titleMain = timkiem;
 		break;

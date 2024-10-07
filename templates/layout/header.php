@@ -13,34 +13,38 @@
 			<div class="wrapper">
 				<div class="logo-mobile text-center">
 					<a href="<?= $config_base ?>">
-					<img class="img-full" onerror="this.src='thumbs/248x98x1/assets/images/noimage.png';" 
-					src="thumbs/307x265x1/upload/photo/<?=$logo['photo']?>" alt="<?=$logo['photo']?>">
+						<img class="img-full" onerror="this.src='thumbs/248x98x1/assets/images/noimage.png';"
+							src="thumbs/307x265x1/upload/photo/<?= $logo['photo'] ?>" alt="<?= $logo['photo'] ?>">
 					</a>
 				</div>
 			</div>
 		</div>
 	</div>
-    <div class="header-topbar">
-        <div class="wrapper">
-            <div class="row d-flex info-container justify-content-between">
-                <div class="col-auto d-flex align-items-center">
-                    <span class="icon icon-45"><i class="fa fa-home"></i></span>
-                    <div>
-                        <p><?=$optsetting["address"]?></p>
-                    </div>
-                </div>
-                <div class="col-auto d-flex align-items-center">
-                    <span class="icon icon-45"><i class="fa fa-phone"></i></span>
-                    <div>
-                        <p><?=$optsetting["phone"]?></p>
-                    </div>
-                </div>
-                <div class="col-auto ">
-
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="header-topbar">
+		<div class="wrapper">
+			<div class="row d-flex info-container justify-content-between">
+				<div class="col-auto d-flex align-items-center">
+					<span class="icon icon-45"><i class="fa fa-home"></i></span>
+					<div>
+						<p><?= $optsetting["address"] ?></p>
+					</div>
+				</div>
+				<div class="col-auto d-flex align-items-center">
+					<span class="icon icon-45"><i class="fa fa-phone"></i></span>
+					<div>
+						<p><?= $optsetting["phone"] ?></p>
+					</div>
+				</div>
+				<div class="col-auto menu-header">
+					<a class="<?= $custom->activeMenu('kien-thuc') ?>" href="kien-thuc">Kiến Thức</a>
+					<span>|</span>
+					<a class="<?= $custom->activeMenu('thu-vien') ?>" href="thu-vien">Thư Viện</a>
+					<span>|</span>
+					<a class="<?= $custom->activeMenu('lien-he') ?>" href="lien-he">Liên Hệ</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="fix">
 		<div class="block-menu">
 			<div class="d-lg-none d-block">
@@ -64,33 +68,36 @@
 			<div class="d-lg-block d-none">
 				<div class="block_header_bottom">
 					<div class="wrapper d-flex justify-content-between align-items-center">
-                        <div class="logo text-center">
-                            <a href="<?= $config_base ?>">
-							<img class="img-full" onerror="this.src='thumbs/248x98x2/assets/images/noimage.png';"
-							src="thumbs/248x98x2/upload/photo/<?=$logo['photo']?>" alt="<?=$logo['photo']?>">
-                            </a>
-                        </div>
+						<div class="logo text-center">
+							<a href="<?= $config_base ?>">
+								<img class="img-full" onerror="this.src='thumbs/248x98x2/assets/images/noimage.png';"
+									src="thumbs/248x98x2/upload/photo/<?= $logo['photo'] ?>" alt="<?= $logo['photo'] ?>">
+							</a>
+						</div>
 						<div class="menu">
 							<ul class="primary-menu">
 								<li><a class="<?= $custom->activeMenu() ?>" href=""><?= trangchu ?></a></li>
 								<li><a class="<?= $custom->activeMenu('gioi-thieu') ?>" href="gioi-thieu">Giới Thiệu</a></li>
+								<?php if (count($dichvulist)) { ?>
+									<?php foreach ($dichvulist as $klist => $vlist) {  ?>
+										<li>
+											<a class="has-child transition" title="<?= $vlist['name' . $lang] ?>" href="<?= $vlist[$sluglang] ?>"><?= $vlist['name' . $lang] ?></a>
+										</li>
+										<li class="line"></li>
+									<?php } ?>
+								<?php } ?>
+
+
 								<li>
-									<a class="<?= $custom->activeMenu('san-pham') ?>" href="san-pham"><?= sanpham ?></a>
-									<?= $custom->primaryMenu('san-pham', 'product') ?>
+									<div class="search-res ms-3">
+										<p class="icon-search transition"><i class="fa fa-search"></i></p>
+										<form class="form-search search-grid w-clear">
+											<input type="text" class="keyword" placeholder="<?= nhaptukhoatimkiem ?>" />
+											<button type="submit"><i class="fa fa-search"></i></button>
+										</form>
+									</div>
 								</li>
-                                <li><a class="<?= $custom->activeMenu('kien-thuc') ?>" href="kien-thuc">Kiến Thức</a></li>
-								<li><a class="<?= $custom->activeMenu('thu-vien') ?>" href="thu-vien">Thư Viện</a></li>
-								<li><a class="<?= $custom->activeMenu('lien-he') ?>" href="lien-he">Liên Hệ</a></li>
-                                <li>
-                                    <div class="search-res ms-3">
-                                        <p class="icon-search transition"><i class="fa fa-search"></i></p>
-                                        <form class="form-search search-grid w-clear">
-                                            <input type="text" class="keyword" placeholder="<?= nhaptukhoatimkiem ?>" />
-                                            <button type="submit"><i class="fa fa-search"></i></button>
-                                        </form>
-                                    </div>
-                                </li>
-                              
+
 							</ul>
 						</div>
 					</div>
@@ -101,15 +108,15 @@
 	<!-- mmenu  -->
 	<nav id="menu">
 		<ul>
-            <li><a class="<?= $custom->activeMenu() ?>" href=""><?= trangchu ?></a></li>
-            <li><a class="<?= $custom->activeMenu('gioi-thieu') ?>" href="gioi-thieu">Giới Thiệu</a></li>
-            <li>
-                <a class="<?= $custom->activeMenu('san-pham') ?>" href="san-pham"><?= sanpham ?></a>
-                <?= $custom->primaryMenu('san-pham', 'product') ?>
-            </li>
-            <li><a class="<?= $custom->activeMenu('kien-thuc') ?>" href="kien-thuc">Kiến Thức</a></li>
-            <li><a class="<?= $custom->activeMenu('thu-vien') ?>" href="thu-vien">Thư Viện</a></li>
-            <li><a class="<?= $custom->activeMenu('lien-he') ?>" href="lien-he">Liên Hệ</a></li>
+			<li><a class="<?= $custom->activeMenu() ?>" href=""><?= trangchu ?></a></li>
+			<li><a class="<?= $custom->activeMenu('gioi-thieu') ?>" href="gioi-thieu">Giới Thiệu</a></li>
+			<li>
+				<a class="<?= $custom->activeMenu('san-pham') ?>" href="san-pham"><?= sanpham ?></a>
+				<?= $custom->primaryMenu('san-pham', 'product') ?>
+			</li>
+			<li><a class="<?= $custom->activeMenu('kien-thuc') ?>" href="kien-thuc">Kiến Thức</a></li>
+			<li><a class="<?= $custom->activeMenu('thu-vien') ?>" href="thu-vien">Thư Viện</a></li>
+			<li><a class="<?= $custom->activeMenu('lien-he') ?>" href="lien-he">Liên Hệ</a></li>
 		</ul>
 	</nav>
 </header>

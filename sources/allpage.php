@@ -11,6 +11,7 @@ $footer = $cache->get("select name$lang, content$lang from #_static where type =
 $screenshot   = $cache->get("SELECT id, photo,options from table_photo where type = ? ", array('screenshot'), 'fetch', 7200);
 $slider = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('slide'), 'result', 7200);
 $chinhsach = $cache->get("select name$lang, slugvi, slugen, id, photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('chinh-sach'), 'result', 7200);
+$dichvulist = $cache->get("select name$lang, slugvi, slugen, id, photo from #_news_list where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('dich-vu'), 'result', 7200);
 $doitac = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('doitac'), 'result', 7200);
 
 $dichvuFooter = $cache->get("select name$lang, slugvi, slugen, id, photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('dich-vu'), 'result', 7200);
@@ -18,7 +19,7 @@ $slogan = $setting['sloganvi'] ?? '';
 /* Get statistic */
 $counter = $statistic->getCounter();
 $online = $statistic->getOnline();
-$link_video = $cache->get("select id, photo, link_video from #_photo where type = ? and act = ? limit 0,1",array('video','photo_static'), 'fetch', 7200);
+$link_video = $cache->get("select id, photo, link_video from #_photo where type = ? and act = ? limit 0,1", array('video', 'photo_static'), 'fetch', 7200);
 /* Newsletter */
 if (isset($_POST['submit-newsletter'])) {
     $responseCaptcha = $_POST['recaptcha_response_newsletter'];
@@ -42,7 +43,7 @@ if (isset($_POST['submit-newsletter'])) {
     if (!empty($error)) {
         $func->transfer($error, $configBase, false);
     }
-$testCaptcha = true;
+    $testCaptcha = true;
     /* Save data */
     if (($scoreCaptcha >= 0.5 && $actionCaptcha == 'Newsletter') || $testCaptcha == true) {
         $data = array();

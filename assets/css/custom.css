@@ -991,6 +991,7 @@ body {
     background: #17529E;
     color: #fff;
     font-size: 20px;
+    padding: 5px 0;
 }
 .block-khachhang{
     background: url("../images/img/bg_khachhang.png") no-repeat;
