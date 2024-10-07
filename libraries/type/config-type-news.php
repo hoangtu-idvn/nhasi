@@ -7,6 +7,23 @@ include "news/config-tintuc.php";
 //     'width' => 320,
 //     'height' => 240,
 // ]);
+$config['news']['dich-vu'] = array_merge(include "news/config-news-no-category.php", [
+    'title_main' => 'Dịch Vụ',
+    'check' => ["hienthi" => "Hiển thị", "noibat" => "Nổi Bật"],
+    'width' => 320,
+    'height' => 240,
+]);
+$config['news']['kien-thuc'] = array_merge(include "news/config-news-no-category.php", [
+    'title_main' => 'Kiến Thức',
+    'check' => ["hienthi" => "Hiển thị", "noibat" => "Nổi Bật"],
+    'width' => 320,
+    'height' => 240,
+]);
+// $config['news']['tuyen-dung'] = array_merge(include "news/config-news-no-category.php", [
+//     'title_main' => 'Tuyển Dụng',
+//     'width' => 320,
+//     'height' => 240,
+// ]);
 $config['news']['tieu-chi'] = array_merge(include "news/config-news-no-category.php", [
     'title_main' => 'Tiêu chí',
     'check' => ["hienthi" => "Hiển thị"],
@@ -30,7 +47,7 @@ $config['news']['kien-thuc'] = array_merge(include "news/config-news-no-category
 $config['news']['tai-sao-chon'] = array_merge(include "news/config-news-no-category.php", [
     'title_main' => 'Tại Sao Chọn',
     'width' => 65,
-    'height' => 75,
+    'height' => 65,
     'slug' => false,
     'copy' => false,
     'images' => true,
@@ -39,11 +56,11 @@ $config['news']['tai-sao-chon'] = array_merge(include "news/config-news-no-categ
 
 $config['news']['khach-hang'] = array_merge(include "news/config-news-no-category.php", [
     'title_main' => 'Khách Hàng',
-    'width' => 281,
-    'height' => 468,
+    'width' => 105,
+    'height' => 105,
     'slug' => false,
     'content' => false,
-    'copy' => false,
+    'copy' => TRUE,
     'images' => true,
     'career' => true,
     'check' => ["hienthi" => "Hiển thị", "noibat" => "Nổi Bật"],

@@ -352,10 +352,11 @@ img.img-max {
   text-align: center;
   line-height: 42px;
   color: #ffffff;
-  font-size: 17px;
+  font-size: 20px;
   margin: 0px;
   border-radius: 50%;
-  background: #046b34;
+  background: url("../images/img/background.png");
+  background-size: cover;
 }
 
 .search-res .icon-search.active {

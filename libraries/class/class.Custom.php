@@ -297,7 +297,7 @@ class Custom
         $str .= '<div class="news-item ' . $class . '">';
         $str .= '<div class="news_box hover-scale " data-animation="animate__zoomIn">';
         $str .= '<div class="news__photo overflow-hidden">';
-        $str .= '<div class="rounded">';
+        $str .= '<div class="rounded  overflow-hidden">';
         $str .= '<a class="text-decoration-none" href="' . $permalink . '">' . $image . '</a>';
         $str .= '</div>';
         $str .= '<div class="flex-grow-1 ps-3">';
