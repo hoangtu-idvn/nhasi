@@ -23,7 +23,7 @@ $config = array(
 		'type' => 'mysql',
 		'host' => 'localhost',
 		'username' => 'root',
-		'password' => '12345678@',
+		'password' => '',
 		'dbname' => 'nhasi',
 		'port' => 3306,
 		'prefix' => 'table_',
@@ -80,7 +80,7 @@ $config = array(
 		'ship' => false
 	),
 	'cart' => array(
-		"active" => true,
+		"active" => false,
 	),
 	'coppy' => array(
 		"lock" => false,

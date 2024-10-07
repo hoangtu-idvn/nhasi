@@ -3992,6 +3992,9 @@ a.baoutus-link:hover{
 
 .ketqua-home{
 
+padding: 50px 0;
+
+display: block;
 }
 .img_max{
   max-width: 100%;
@@ -4128,6 +4131,9 @@ font-weight: 600;
 }
 .menu-header a:hover{
   color:yellow;
+}
+.sukien-items .image img{
+  max-width: 100%;
 }
 /* css-1 */
 
