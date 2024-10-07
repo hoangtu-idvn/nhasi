@@ -80,7 +80,7 @@
                         <div class="col-md-3 mb-3">
                             <h2 class="title-footer">Dịch vụ</h2>
                             <ul class="footer-ul">
-                                <?php foreach($dichv as $v) { ?>
+                                <?php foreach($dichvuFooter as $v) { ?>
                                     <li><a class="text-decoration-none" href="<?=$v[$sluglang]?>" title="<?=$v['name'.$lang]?>"><?=$v['name'.$lang]?></a></li>
                                 <?php } ?>
                             </ul>

@@ -12,6 +12,8 @@ $screenshot   = $cache->get("SELECT id, photo,options from table_photo where typ
 $slider = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('slide'), 'result', 7200);
 $chinhsach = $cache->get("select name$lang, slugvi, slugen, id, photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('chinh-sach'), 'result', 7200);
 $doitac = $cache->get("select name$lang, photo, link from #_photo where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('doitac'), 'result', 7200);
+
+$dichvuFooter = $cache->get("select name$lang, slugvi, slugen, id, photo from #_news where type = ? and find_in_set('hienthi',status) order by numb,id desc", array('dich-vu'), 'result', 7200);
 $slogan = $setting['sloganvi'] ?? '';
 /* Get statistic */
 $counter = $statistic->getCounter();
