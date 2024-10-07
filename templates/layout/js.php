@@ -40,6 +40,7 @@ $js->set("toc/toc.js");
 $js->set("js/slickData.js");
 $js->set("js/scrollAnimation.js");
 $js->set("js/functions.js");
+$js->set("flipster/jquery.flipster.min.js");
 $js->set("js/apps.js");
 $js->set("js/cart.js");
 echo $js->get();

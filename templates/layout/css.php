@@ -22,6 +22,8 @@ $css->set("simplenotify/simple-notify.css");
 $css->set("fileuploader/font-fileuploader.css");
 $css->set("fileuploader/jquery.fileuploader.min.css");
 $css->set("fileuploader/jquery.fileuploader-theme-dragdrop.css");
+$css->set("flipster/jquery.flipster.css");
+$css->set("flipster/flipsternavtabs.css");
 $css->set("css/main.css");
 $css->set("css/custom.css");
 echo $css->get();

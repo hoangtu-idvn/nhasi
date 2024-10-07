@@ -426,4 +426,14 @@ $(document).ready(function () {
   NN_FRAMEWORK.Search();
   NN_FRAMEWORK.loadNameInputFile();
   NN_FRAMEWORK.Toc();
+  if (isExist($(".flipster"))) {
+    $(".flipster").flipster({ 
+      loop: true,
+      style: 'carousel',
+      spacing: -0.5,
+      scrollwheel: false,
+      nav: true,
+      buttons: true,
+    });
+  }
 });

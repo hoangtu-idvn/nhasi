@@ -3912,3 +3912,138 @@ coccocgrammar {
   z-index: 0;
   left: -6px;
 }
+
+/* css-1 */
+
+.aboutus-home{
+
+padding: 50px 0;
+
+display: block;
+}
+
+.aboutus-box{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutus-left{
+  width: 50%;
+  padding: 0 30px 0 0;
+}
+.aboutus-right{
+  width: 50%;
+  padding: 0 0 0 0px;
+}
+.aboutus-title{
+  color:#17529E;
+  font-size: 70px;
+  font-weight: 600;
+}
+.aboutus-desc{
+  color: #696969;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 20px 0 30px;
+  line-height: 34px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+}
+.baoutus-link{
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #c8a54b 0%, #fcf198 50%, #c8a54b 100%);
+  color: #fff;
+  font-weight: 500;
+  font-size: 24px;
+  text-decoration: none;
+}
+.baoutus-link img{
+
+}
+a.baoutus-link:hover{
+  color:#fff;
+}
+.tieuchi-row{
+  margin-bottom: 20px;
+}
+.tieuchi-items{
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+.tieuchi-items .image{
+
+}
+.tieuchi-items .tieuchi-name{
+  margin: 10px 0 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #585858;
+}
+
+
+.ketqua-home{
+  
+}
+.img_max{
+	max-width: 100%;
+	height: auto;
+}
+.daotao{
+	text-align: center;
+}
+
+.daotao h3 a{
+	color: #2b2b2b;
+	font-size: 20px;
+	font-family: beb;
+	display: block;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-transform: uppercase;
+	margin-top: 20px;
+	padding-bottom: 50px;
+}
+.flip-current h3 a{
+	background: url(../images/shadow-bot.png) bottom center no-repeat;
+}
+.daotao h3 a:hover{
+	text-decoration: none;
+	color: #b02626;
+}
+.flipster__nav__item {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  text-indent: 100%;
+  background: #000;
+}
+
+.flipster__nav__link { opacity: 0; }
+.flipster__nav__link:after { display: none; }
+
+.flipster__nav__item--current {
+  background: #F00;
+}
+
+.title-home{text-align: center;font-size: 60px;color: #17529E;font-weight: 600;}
+.slogan-title-home{
+  text-align: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #585858;
+  font-size: 24px;
+  font-weight: 400;
+  padding-top: 20px;
+}
+/* css-1 */
