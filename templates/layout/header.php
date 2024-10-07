@@ -36,6 +36,17 @@
                     </div>
                 </div>
                 <div class="col-auto ">
+                    <ul class="list-unstyled menu-topbar">
+                        <li>
+                            <a href="kien-thuc">Kiến Thức</a>
+                        </li>
+                        <li>
+                            <a href="tin-tuc">Tin Tức</a>
+                        </li>
+                        <li>
+                            <a href="lien-he">Liên Hệ</a>
+                        </li>
+                    </ul>
 
                 </div>
             </div>

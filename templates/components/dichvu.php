@@ -26,7 +26,7 @@ if(count($dichvu)) { ?>
                                         <?=$func->getImage(['sizes' => '280x280x1', 'isWatermark' => false, 'prefix' => 'news', 'upload' => UPLOAD_NEWS_L, 'image' => $v['photo'], 'alt' => $v['name'.$lang]])?>
                                     </p>
                                     <div class="_content">
-                                        <h3 class="news-name"><?=$v['name'.$lang]?></h3>
+                                        <h3 class="news-name p-3"><?=$v['name'.$lang]?></h3>
                                         <p>
                                             <?=$v['desc'.$lang]?>
                                         </p>
