@@ -688,6 +688,7 @@ body {
     /* height: 255px; */
     text-align:center;
     margin: 0 auto;
+    padding: 15px;
 }
 .why-items .pic-product > div{
     width: 155px;
@@ -991,7 +992,7 @@ body {
     background: #17529E;
     color: #fff;
     font-size: 20px;
-    padding: 5px 0;
+    padding: 10px 0;
 }
 .block-khachhang{
     background: url("../images/img/bg_khachhang.png") no-repeat;
@@ -1014,4 +1015,24 @@ body {
 .why-items .text-white p{
     font-size: 20px;
     line-height: 1.5;
+}
+
+.menu-topbar{
+    display: flex;
+    align-items:center;
+    margin: 0;
+    height: 100%;
+}
+.menu-topbar li a{
+    text-decoration: none;
+}
+.menu-topbar li a:hover{
+    color: #f3c709;
+}
+.menu-topbar li{
+    margin: 0;
+}
+.menu-topbar li + li:before{
+    content: "|";
+    margin: 0 15px;
 }

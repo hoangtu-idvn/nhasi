@@ -35,12 +35,19 @@
 						<p><?= $optsetting["phone"] ?></p>
 					</div>
 				</div>
-				<div class="col-auto menu-header">
-					<a class="<?= $custom->activeMenu('kien-thuc') ?>" href="kien-thuc">Kiến Thức</a>
-					<span>|</span>
-					<a class="<?= $custom->activeMenu('thu-vien') ?>" href="thu-vien">Thư Viện</a>
-					<span>|</span>
-					<a class="<?= $custom->activeMenu('lien-he') ?>" href="lien-he">Liên Hệ</a>
+				<div class="col-auto ">
+					<ul class="list-unstyled menu-topbar">
+						<li>
+							<a href="kien-thuc">Kiến Thức</a>
+						</li>
+						<li>
+							<a href="tin-tuc">Tin Tức</a>
+						</li>
+						<li>
+							<a href="lien-he">Liên Hệ</a>
+						</li>
+					</ul>
+
 				</div>
 			</div>
 		</div>

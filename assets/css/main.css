@@ -2463,7 +2463,7 @@ coccocgrammar {
 .support-online img {
   width: 40px;
   height: 40px;
-  background: #006d32;
+  background: #105bbd;
   color: #fff;
   border-radius: 100%;
   font-size: 20px;
@@ -2488,7 +2488,7 @@ coccocgrammar {
   border: 2px solid transparent;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  background-color: rgb(0 109 51 / 32%);
+  background-color: rgb(23 82 158 / 22%);
   opacity: 0.75;
   right: -10px;
 }
@@ -2501,9 +2501,9 @@ coccocgrammar {
   position: absolute;
   background-color: transparent;
   border-radius: 100%;
-  border: 2px solid rgb(0 109 51);
+  border: 2px solid rgb(23 82 158 / 55%);
   opacity: 0.1;
-  border-color: #006d32;
+  border-color: #17529e;
   opacity: 0.5;
 }
 
@@ -3918,9 +3918,9 @@ coccocgrammar {
 
 .aboutus-home{
 
-padding: 50px 0;
+  padding: 50px 0;
 
-display: block;
+  display: block;
 }
 
 .aboutus-box{
@@ -3991,34 +3991,34 @@ a.baoutus-link:hover{
 
 
 .ketqua-home{
-  
+
 }
 .img_max{
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 .daotao{
-	text-align: center;
+  text-align: center;
 }
 
 .daotao h3 a{
-	color: #2b2b2b;
-	font-size: 20px;
-	font-family: beb;
-	display: block;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	text-transform: uppercase;
-	margin-top: 20px;
-	padding-bottom: 50px;
+  color: #2b2b2b;
+  font-size: 20px;
+  font-family: beb;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding-bottom: 50px;
 }
 .flip-current h3 a{
-	background: url(../images/shadow-bot.png) bottom center no-repeat;
+  background: url(../images/shadow-bot.png) bottom center no-repeat;
 }
 .daotao h3 a:hover{
-	text-decoration: none;
-	color: #b02626;
+  text-decoration: none;
+  color: #b02626;
 }
 .flipster__nav__item {
   border-radius: 50%;
